@@ -6,7 +6,7 @@ getAllBookmarks is a function stored on the window that returns a promise.
 
 ## How to Use
 1) Log into [`https://my.bible.com/`](https://my.bible.com/)
-2) Paste the `getAllBookmarks` function into the console log
+2) Paste the [`getAllBookmarks`](https://github.com/zmilkman/youversion-download-bookmarks/blob/main/getAllBookmarks.js) function into the console log
 3) Do something with the data
 
 ## example usage with download of JSON data
