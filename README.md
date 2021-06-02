@@ -24,7 +24,7 @@ getAllBookmarks('scottmforte', true).then((bookmarks)=>{
   // download the data in JSON format
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(bookmarks));
   var dlAnchorElem = document.createElement("a");
-  dlAnchorElem.setAttribute("href",     dataStr     );
+  dlAnchorElem.setAttribute("href", dataStr);
   dlAnchorElem.setAttribute("download", "bookmarks.json");
   dlAnchorElem.click();
 
