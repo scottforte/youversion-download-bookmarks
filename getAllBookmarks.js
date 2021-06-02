@@ -1,16 +1,27 @@
 function getAllBookmarks(username, reformat){
   return new Promise(function(resolve, reject){
+    
+    // setup
     var bookmarks = [];
     var bookmarkPage = 1;
+    
     function getBookmarks(page){
+      
+      // let me know it's working
       console.log('getting page', page);
-      if(page > 1000){ reject(bookmarks); }
+      
+      // dont run forever by accident
+      if(page > 1000){ reject(bookmarks); return; }
+      
       $.getJSON('https://my.bible.com/users/'+username+'/_cards.json?kind=bookmark&page='+page)
         .done((data)=>{
-          console.log('page', page, data);
+          
+          // this is how we know there are no more pages to get
           if(data.error){ resolve(bookmarks); return; }
+        
           $.each(data, (k,bookmark)=>{
-
+            
+            // this is the format I like to keep it simple
             if(reformat){
               bookmarks.push({
                 'id':bookmark.object.id,
@@ -25,8 +36,11 @@ function getAllBookmarks(username, reformat){
             }
 
           });
+          
+          // get the next page if there was no error
           bookmarkPage++
           getBookmarks(bookmarkPage);
+        
         });
     };
 
