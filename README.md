@@ -31,7 +31,12 @@ getAllBookmarks('scottmforte', true).then((bookmarks)=>{
 });
 ```
 
-# TODO
+## TODO
 Eventually it would be cool to do this progromatically with cURL and sessions,
 but I don't really want to spend more time on this. I have what I need.
 If you want to do it, happy to merge it here.
+
+---
+**God Bless & Make it a Great Day!**
+
+❤️ Scott Forte
