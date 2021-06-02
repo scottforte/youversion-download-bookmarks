@@ -1,8 +1,13 @@
 # youversion-download-bookmarks
 A way to download all your YouVersion bookmarks in JSON format
 
-## description
-getAllBookmarks is a function stored on the window that returns a promise.
+## Background
+I wanted a way to download my +1,000 bookmarks with tags.
+The dev team said they couldn't do it for me...
+So I did it myself.
+
+## How it works
+[`getAllBookmarks`](https://github.com/zmilkman/youversion-download-bookmarks/blob/main/getAllBookmarks.js) is a promise that returns all bookmarks
 
 ## How to Use
 1) Log into [`https://my.bible.com/`](https://my.bible.com/)
@@ -25,3 +30,8 @@ getAllBookmarks('scottmforte', true).then((bookmarks)=>{
 
 });
 ```
+
+# TODO
+Eventually it would be cool to do this progromatically with cURL and sessions,
+but I don't really want to spend more time on this. I have what I need.
+If you want to do it, happy to merge it here.
